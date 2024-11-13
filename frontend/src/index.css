@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  margin-top: 14px;
+}
+
+h1 {
+  margin-bottom: 18px;
+}
+
+/* ITEMS */
+
+.items {
+  border: 2px solid #868e96;
+  border-radius: 8px;
+}
+
+.problems {
+  list-style-type: none;
+  margin-bottom: 32px;
+  display: flex;
+  gap: 40px;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.answer-box {
+  display: flex;
+  gap: 8px;
+}
+
+/* RANGE */
+
+.range--submit {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+/* PROBLEM BOX */
+
+.problem--box {
+  display: flex;
+  background-color: #f8f9fa;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.problem--problem {
+  background-color: #e6f3f5;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.problem--box,
+.problem--problem {
+  padding: 8px 8px; /* Adds vertical padding inside the individual problem boxes */
+}
+
+/* ANSWER BOX */
+
+.answer--box {
+  padding: 8px 12px; /* Adjust padding to fit the text nicely */
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Rounded corners */
+  outline: none;
+}
