@@ -8,4 +8,4 @@ from rest_framework.routers import DefaultRouter
 
 from .views import PostListAPIView
 
-urlpatterns = [path("posts/", PostListAPIView.as_view())]
+urlpatterns = [path("posts/<int:section>/<int:set>/", PostListAPIView.as_view())]

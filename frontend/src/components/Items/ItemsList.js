@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import Item from "./Item";
 
 export default function ItemsList() {
   const [items, setItems] = useState([]);
   const [rangeSubmit, setRangeSubmit] = useState(false);
+
+  const { section } = useParams();
+  const { set } = useParams();
+
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/posts/")
+      .get(`http://127.0.0.1:8000/api/posts/${+section}/${+set}/`)
       .then((response) => {
         setItems(response.data);
       })

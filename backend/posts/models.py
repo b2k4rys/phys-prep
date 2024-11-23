@@ -7,6 +7,7 @@ import random
 class Section(models.Model):
 
     title = models.CharField(max_length=100, default="PHYS 161", unique=True)
+    value = models.CharField(max_length=3, blank=True, null=True)
 
     def __str__(self):
         return f"Section: {self.title}"
