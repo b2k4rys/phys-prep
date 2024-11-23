@@ -1,10 +1,14 @@
-import ItemsList from "./components/ItemsList";
+import ItemsList from "./components/Items/ItemsList";
+import { Routes, Route } from "react-router-dom";
+import Main from "./components/Main/HomePage";
 
 export default function App() {
   return (
-    <div>
-      <h1 style={{ textAlign: "center" }}>Problems</h1>
-      <ItemsList />
-    </div>
+    <>
+      <Routes>
+        <Route path="/problems" element={<ItemsList />} />
+        <Route path="/" element={<Main />} />
+      </Routes>
+    </>
   );
 }

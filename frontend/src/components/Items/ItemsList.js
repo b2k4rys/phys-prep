@@ -37,6 +37,18 @@ export default function ItemsList() {
     setRangeSubmit(true);
   }
 
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  const newItems = shuffleArray(items.slice(range[0], range[1] + 1));
+  console.log(newItems);
+
   return (
     <div>
       <form onSubmit={(e) => handleSubmitRange(e)} class="range--submit">
@@ -54,7 +66,7 @@ export default function ItemsList() {
       </form>
       {rangeSubmit === true ? (
         <ul>
-          {items.slice(range[0], range[1] + 1).map((item) => (
+          {newItems.map((item) => (
             <Item
               key={item.id}
               problem={item.body}
